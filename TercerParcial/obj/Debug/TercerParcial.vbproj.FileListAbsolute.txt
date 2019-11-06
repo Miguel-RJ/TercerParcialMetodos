@@ -12,3 +12,15 @@ C:\Users\Rodrigo\source\repos\TercerParcial\TercerParcial\obj\Debug\TercerParcia
 C:\Users\Rodrigo\source\repos\TercerParcial\TercerParcial\bin\Debug\info.lundin.math.dll
 C:\Users\Rodrigo\source\repos\TercerParcial\TercerParcial\obj\Debug\TercerParcial.Form_Principal.resources
 C:\Users\Rodrigo\source\repos\TercerParcial\TercerParcial\obj\Debug\TercerParcial.vbproj.CopyComplete
+Z:\TercerParcialMetodos\TercerParcial\bin\Debug\TercerParcial.exe.config
+Z:\TercerParcialMetodos\TercerParcial\bin\Debug\TercerParcial.exe
+Z:\TercerParcialMetodos\TercerParcial\bin\Debug\TercerParcial.pdb
+Z:\TercerParcialMetodos\TercerParcial\bin\Debug\TercerParcial.xml
+Z:\TercerParcialMetodos\TercerParcial\obj\Debug\TercerParcial.vbprojAssemblyReference.cache
+Z:\TercerParcialMetodos\TercerParcial\obj\Debug\TercerParcial.Form_Principal.resources
+Z:\TercerParcialMetodos\TercerParcial\obj\Debug\TercerParcial.Resources.resources
+Z:\TercerParcialMetodos\TercerParcial\obj\Debug\TercerParcial.vbproj.GenerateResource.cache
+Z:\TercerParcialMetodos\TercerParcial\obj\Debug\TercerParcial.vbproj.CopyComplete
+Z:\TercerParcialMetodos\TercerParcial\obj\Debug\TercerParcial.exe
+Z:\TercerParcialMetodos\TercerParcial\obj\Debug\TercerParcial.xml
+Z:\TercerParcialMetodos\TercerParcial\obj\Debug\TercerParcial.pdb

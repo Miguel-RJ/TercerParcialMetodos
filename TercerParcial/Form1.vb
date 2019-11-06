@@ -32,35 +32,91 @@ Public Class Form_Principal
         Return parser.Parse(tf.Text)
     End Function
     Private Sub Calcular_Click(sender As Object, e As EventArgs) Handles Calcular.Click
+        Dim SelectedFormula As String
+        SelectedFormula = cbmenu.SelectedItem
         a = ta.Text
         b = tb.Text
         c = tc.Text
         a1 = ta1.Text
         b1 = tb1.Text
-        n = 100
         ec = 0.5 * 10 ^ (-c)
         redon = c + 2
         erro(i) = 1
+        Select Case SelectedFormula
+            Case "Rectangulos"
+                n = 100
+            Case "Trapecios"
+                n = 10
+            Case "Simpson"
+                n = 4
+            Case Else
+                n = 100
+        End Select
+
         h = (b - a) / n
         suma = 0
-        For k = 0 To n - 1
-            suma = suma + h * f(a + k * h)
-        Next
 
-        integra(i) = suma
+        Select Case SelectedFormula
+            Case "Rectangulos"
+                For k = 0 To n - 1
+                    suma = suma + h * f(a + k * h)
+                Next
+            Case "Trapecios"
+                For k = 1 To n - 1
+                    suma = suma + h / 2 * (2 * f(a + k * h))
+                Next
+                integra(i) = suma + ((h / 2) * (f(a) + f(b)))
+            Case "Simpson"
+                For k = 1 To n - 1
+                    suma = suma + h / 3 * ((2 * f(a + (2 * k - 1) * h)) + f(a + 2 * k * h))
+                Next
+                integra(i) = suma + ((h / 3) * (f(a) - f(b)))
+            Case Else
+                For k = 0 To n - 1
+                    suma = suma + h * f(a + k * h)
+                Next
+        End Select
+
         'imprime en renglones
         salida.Rows.Add(n, Math.Round(integra(i), redon), Math.Round(erro(i), redon))
 
         Do While erro(i) > ec
-            n = n + 100
-            i = i + 1
-            h = (b - a) / n
-            suma = 0
-            For k = 0 To n - 1
-                suma = suma + h * f(a + k * h)
-            Next
-
-            integra(i) = suma
+            Select Case SelectedFormula
+                Case "Rectangulos"
+                    n = n + 100
+                    i = i + 1
+                    h = (b - a) / n
+                    suma = 0
+                    For k = 0 To n - 1
+                        suma = suma + h * f(a + k * h)
+                    Next
+                Case "Trapecios"
+                    n = n + 10
+                    i = i + 1
+                    h = (b - a) / n
+                    suma = 0
+                    For k = 1 To n - 1
+                        suma = suma + h / 2 * (2 * f(a + k * h))
+                    Next
+                Case "Simpson"
+                    n = n + 4
+                    i = i + 1
+                    h = (b - a) / n
+                    suma = 0
+                    For k = 1 To n - 1
+                        suma = suma + h / 3 * ((2 * f(a + (2 * k - 1) * h)) + f(a + 2 * k * h))
+                    Next
+                    integra(i) = suma + ((h / 3) * (f(a) - f(b)))
+                Case Else
+                    n = n + 100
+                    i = i + 1
+                    h = (b - a) / n
+                    suma = 0
+                    For k = 0 To n - 1
+                        suma = suma + h * f(a + k * h)
+                    Next
+            End Select
+            'integra(i) = suma + (h / 2 * (f(a) + f(b)))
             erro(i) = Math.Abs((integra(i) - integra(i - 1)) / integra(i))
 
             salida.Rows.Add(n, Math.Round(integra(i), redon), Math.Round(erro(i), redon))
