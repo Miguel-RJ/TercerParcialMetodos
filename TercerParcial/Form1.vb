@@ -60,6 +60,7 @@ Public Class Form_Principal
             Case "Rectangulos"
                 For k = 0 To n - 1
                     suma = suma + h * f(a + k * h)
+                    integra(i) = suma
                 Next
             Case "Trapecios"
                 For k = 1 To n - 1
@@ -67,10 +68,11 @@ Public Class Form_Principal
                 Next
                 integra(i) = suma + ((h / 2) * (f(a) + f(b)))
             Case "Simpson"
+                h = (b - a) / (n * 2)
                 For k = 1 To n
-                    suma = suma + h / 3 * (4 * f(a + (2 * k - 1) * h))
+                    suma = suma + (4 * f(a + (2 * k - 1) * h) + (2 * f(a + (2 * k) * h)))
                 Next
-                integra(i) = suma + ((h / 3) * (f(a) - f(b) + 2 * f(a + 2 * k * h)))
+                integra(i) = h / 3 * (suma + (f(a) - f(b)))
             Case Else
                 For k = 0 To n - 1
                     suma = suma + h * f(a + k * h)
@@ -103,12 +105,12 @@ Public Class Form_Principal
                 Case "Simpson"
                     n = n + 4
                     i = i + 1
-                    h = (b - a) / n
+                    h = (b - a) / (n * 2)
                     suma = 0
                     For k = 1 To n
-                        suma = suma + h / 3 * (4 * f(a + (2 * k - 1) * h))
+                        suma = suma + (4 * f(a + (2 * k - 1) * h) + (2 * f(a + (2 * k) * h)))
                     Next
-                    integra(i) = suma + ((h / 3) * (f(a) - f(b) + 2 *f(a + 2 * k * h)))
+                    integra(i) = h / 3 * (suma + (f(a) - f(b)))
                 Case Else
                     n = n + 100
                     i = i + 1

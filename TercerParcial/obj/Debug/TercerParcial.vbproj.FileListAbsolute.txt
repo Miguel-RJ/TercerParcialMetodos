@@ -9,7 +9,6 @@ C:\Users\Rodrigo\source\repos\TercerParcial\TercerParcial\obj\Debug\TercerParcia
 C:\Users\Rodrigo\source\repos\TercerParcial\TercerParcial\obj\Debug\TercerParcial.exe
 C:\Users\Rodrigo\source\repos\TercerParcial\TercerParcial\obj\Debug\TercerParcial.xml
 C:\Users\Rodrigo\source\repos\TercerParcial\TercerParcial\obj\Debug\TercerParcial.pdb
-C:\Users\Rodrigo\source\repos\TercerParcial\TercerParcial\bin\Debug\info.lundin.math.dll
 C:\Users\Rodrigo\source\repos\TercerParcial\TercerParcial\obj\Debug\TercerParcial.Form_Principal.resources
 C:\Users\Rodrigo\source\repos\TercerParcial\TercerParcial\obj\Debug\TercerParcial.vbproj.CopyComplete
 Z:\TercerParcialMetodos\TercerParcial\bin\Debug\TercerParcial.exe.config
